@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/dialog.css">
     <meta charset="UTF-8">
     <title>Configuration</title>
@@ -21,8 +21,14 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-sx-6">
-                <span class="dropdown-label">Message text</span> <br>
-                <textarea name="messageText" id="messageText" cols="30" rows="5"></textarea>
+                <span class="dropdown-label">Text to display when there are no records</span> <br>
+                <textarea name="messageText" id="messageText" cols="30" rows="2"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sx-6">
+                <span class="dropdown-label">Text to display when there are one or more records</span> <br>
+                <textarea name="messageTextWithData" id="messageTextWithData" cols="30" rows="2"></textarea>
             </div>
         </div>
         <div class="row dialog-buttons">
@@ -32,8 +38,8 @@
         </div>
     </div>
 </body>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/tableau-extensions-1.latest.min.js"></script>
 <script type="text/javascript" src="js/dialog.js"></script>
 </html>
