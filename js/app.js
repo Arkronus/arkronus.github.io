@@ -30,16 +30,22 @@
     function buildMessage() {
         var worksheetName = tableau.extensions.settings.get("worksheet");
         var message = tableau.extensions.settings.get("message");
+        var messageWithData = tableau.extensions.settings.get("messageWithData");
 
         console.log(worksheetName);
         console.log(message);
+        console.log(messageWithData);
         
         var worksheet = getWorksheetByName(worksheetName);
 
         worksheet.getSummaryDataAsync().then((sumdata) =>{
             var dataLength = sumdata.data.length;
             if (dataLength > 0){
-                var recordString = "There are " + dataLength + " records";
+                if (messageWithData === undefined){
+                    var recordString = "There are " + dataLength + " records";
+                } else {
+                    var recordString = messageWithData;
+                }
                 $(".msg").text(recordString);
             }else {
                 (message) ? $(".msg").text(message) : $(".msg").text("Set your message in Configuration menu")

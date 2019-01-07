@@ -28,6 +28,7 @@
         console.log("Saving");
         tableau.extensions.settings.set("worksheet", $("#selectWorksheet").val());
         tableau.extensions.settings.set("message", $("#messageText").val());
+        tableau.extensions.settings.set("messageWithData", $("#messageTextWithData").val());
         // console.log(tableau.extensions.settings.get("worksheet"));
         // console.log(tableau.extensions.settings.get("message"));
 
